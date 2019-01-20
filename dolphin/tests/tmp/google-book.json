@@ -1,0 +1,678 @@
+{
+ "kind": "books#volumes",
+ "totalItems": 652,
+ "items": [
+  {
+   "kind": "books#volume",
+   "id": "shC7iZh4qPMC",
+   "etag": "rOAXFnDHxY8",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/shC7iZh4qPMC",
+   "volumeInfo": {
+    "title": "기본중국어 2(CD-ROM 1장 포함)",
+    "authors": [
+     "이재돈외",
+     "이재돈, 심소희, 모해연, 최려홍"
+    ],
+    "publisher": "Ewha Womans University Press",
+    "publishedDate": "2005-09-02",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "8973006509"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9788973006502"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 168,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.0.1.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=shC7iZh4qPMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=shC7iZh4qPMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "zh-CN",
+    "previewLink": "http://books.google.com/books?id=shC7iZh4qPMC&pg=PA7&dq=1&hl=&cd=1&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=shC7iZh4qPMC&dq=1&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/%EA%B8%B0%EB%B3%B8%EC%A4%91%EA%B5%AD%EC%96%B4_2_CD_ROM_1%EC%9E%A5_%ED%8F%AC%ED%95%A8.html?hl=&id=shC7iZh4qPMC"
+   },
+   "saleInfo": {
+    "country": "CN",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "CN",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=shC7iZh4qPMC&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "\u003cb\u003e1\u003c/b\u003e\\矮 01 (^) 2 按时 511 ^ \u003cb\u003e1\u003c/b\u003e ^\u003cb\u003e1\u003c/b\u003e 0)^14 ^\u003cb\u003e1\u003c/b\u003e^\u003cb\u003e1\u003c/b\u003e 8 6 巴西 85x1 旦許召 10 把 1x1 7^\u003cb\u003e1\u003c/b\u003e^^ ^ ^\u003cbr\u003e\n]^) 13 \u003cb\u003e1\u003c/b\u003e,\u003cb\u003e1\u003c/b\u003e 1161 5)4 7 搬家 \u003cb\u003e1\u003c/b\u003e ^ 11 |10 4 办 \u003cb\u003e1\u003c/b\u003e ^ 11 許化^ 5^\u003cb\u003e1\u003c/b\u003e^ 9 办法^ 2 4&quot;-^ \u003cbr\u003e\n1301111011 ^^&#39;&amp; 12 /投忙 135112 111011^ ^咅吾化叫平砕 14 活助( ^ ―晉 4 5 棒\u003cbr\u003e\n&nbsp;..."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "YUeCAgAAQBAJ",
+   "etag": "2a7gui2HbWQ",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/YUeCAgAAQBAJ",
+   "volumeInfo": {
+    "title": "怪物王女(1)",
+    "authors": [
+     "光永康則"
+    ],
+    "publisher": "JABook",
+    "publishedDate": "2006-08-10",
+    "description": "一滴血，相當於生命之泉。 平凡的少年日郎， 因為車禍而不幸身亡， 後來喝下了神秘少女「公主」的血， 得以死而復生。 然而， 喝下不可思議的血而復活的日郎， 往後卻必須以血戰士的身分迎戰； 而神秘少女「公主」， 則是身處人稱怪物的異形者頂端的王族成員之一， 為了爭奪王位， 和有著血緣關係的兄弟姊妹，展開了一場殺戮。 成為血戰士的日郎， 就這麼與公主一起捲入了謀略與憎恨的漩渦之中…",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "PKEY:4717702205560"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "printType": "BOOK",
+    "categories": [
+     "Comics & Graphic Novels"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "preview-1.0.0",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "comicsContent": true,
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=YUeCAgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=YUeCAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "zh-CN",
+    "previewLink": "http://books.google.com/books?id=YUeCAgAAQBAJ&pg=PT62&dq=1&hl=&cd=2&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=YUeCAgAAQBAJ&dq=1&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/%E6%80%AA%E7%89%A9%E7%8E%8B%E5%A5%B3_1.html?hl=&id=YUeCAgAAQBAJ"
+   },
+   "saleInfo": {
+    "country": "CN",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "CN",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com/books/download/%E6%80%AA%E7%89%A9%E7%8E%8B%E5%A5%B3_1-sample-pdf.acsm?id=YUeCAgAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=YUeCAgAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "-على_ _ _ _ _ _ _ _ _ _ _ _ _*- - - - - T *T-----------\u003cb\u003e1\u003c/b\u003e-11-11-\u003cb\u003e1\u003c/b\u003e-11-11-11-11-11-11-\u003cb\u003e1\u003c/b\u003e-\u003cbr\u003e\n11-\u003cb\u003e1\u003c/b\u003e-\u003cb\u003e1\u003c/b\u003e-HH1-\u003cb\u003e1\u003c/b\u003e-\u003cb\u003e1\u003c/b\u003e -----------\u003cb\u003e1\u003c/b\u003e-\u003cb\u003e1\u003c/b\u003e --------------\u003cb\u003e1\u003c/b\u003e- ----------------------------H1-11-11-11 - 11 -\u003cbr\u003e\n--------------------------------------------T-الى------7-* H1-11-\u003cb\u003e1\u003c/b\u003e-\u003cb\u003e1\u003c/b\u003e ----------T_ |. 頁面擷取&nbsp;..."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "RZC8AAAAQBAJ",
+   "etag": "NpLjGFuOyj8",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/RZC8AAAAQBAJ",
+   "volumeInfo": {
+    "title": "台星潮 1",
+    "authors": [
+     "明報娛樂版"
+    ],
+    "publisher": "日閱堂",
+    "publishedDate": "2008",
+    "description": "內容簡介： 飛輪海熱爆 寂寞蔡依林怕嫁唔出 棒棒堂年代的誕生 黑澀會 美眉巨星夢 賀軍翔 小天王．大夢想 楊丞琳來了 我係鄭元暢 Ella 喪狗之痛 完美 郭品超 「鬥牛」勇士 賀軍翔 李威 天生演戲狂 周渝民 銀色公路 183Club 打不散 楊宗緯 蕭敬騰 星光大道",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9789628993437"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "9628993437"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 386,
+    "printType": "BOOK",
+    "categories": [
+     "Performing Arts"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=RZC8AAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=RZC8AAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "zh-CN",
+    "previewLink": "http://books.google.com/books?id=RZC8AAAAQBAJ&pg=PA158&dq=1&hl=&cd=3&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=RZC8AAAAQBAJ&dq=1&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/%E5%8F%B0%E6%98%9F%E6%BD%AE_1.html?hl=&id=RZC8AAAAQBAJ"
+   },
+   "saleInfo": {
+    "country": "CN",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "CN",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com/books/download/%E5%8F%B0%E6%98%9F%E6%BD%AE_1-sample-pdf.acsm?id=RZC8AAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=RZC8AAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "ïâïïíëlfëìêyï \u003cb\u003e1\u003c/b\u003e ЗЁЙЁЕ&#39;ЧЁЁЁШЬЕ&#39;ЭЙЁЕЁ \u003cb\u003e1\u003c/b\u003e ëâêïâïŕàííîìëîîäïjîîáâmäêë \u003cb\u003e1\u003c/b\u003e ЖЁЁЕЁЁБ&#39;\u003cbr\u003e\nЭЁА— ЁЁИЁЙЕ&#39;ЭШЁ ° ЁЁЕЁЁЁЁ&#39;ЁЛЁИЁЁПЩЁЙ rV\\/EV\\/EJ ЕЁ ? ЁЁЕТШЁЁЁЙ \u003cbr\u003e\n\u003cb\u003e1\u003c/b\u003e Eäämiäî \u003cb\u003e1\u003c/b\u003e êääääìŕëï ЙЕЧЁ*#Б%1ЙЁЁ1ШЁЩЙ1ЁЁЁЬЫ (\\/\\/Е\\/\\/Е)&nbsp;..."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "HHvGhxUeFUAC",
+   "etag": "870B/8KZSvc",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/HHvGhxUeFUAC",
+   "volumeInfo": {
+    "title": "商事法律报告(第1卷)",
+    "publisher": "中信出版社",
+    "publishedDate": "2004",
+    "description": "本书旨在沟通中国商法实践与理论研究,全书以探寻商事法律实践问题的解决方案为视角,在推动实践问题的合理解决的同时,也推动商法理论包括商法基础理论的研究。",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "7508602560"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9787508602561"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 367,
+    "printType": "BOOK",
+    "averageRating": 5.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.1.2.0.preview.1",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=HHvGhxUeFUAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=HHvGhxUeFUAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "zh-CN",
+    "previewLink": "http://books.google.com/books?id=HHvGhxUeFUAC&pg=PA139&dq=1&hl=&cd=4&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=HHvGhxUeFUAC&dq=1&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/%E5%95%86%E4%BA%8B%E6%B3%95%E5%BE%8B%E6%8A%A5%E5%91%8A_%E7%AC%AC1%E5%8D%B7.html?hl=&id=HHvGhxUeFUAC"
+   },
+   "saleInfo": {
+    "country": "CN",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "CN",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=HHvGhxUeFUAC&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "42 61.76%| 5 50.00%| 3 30.00%| 78 57.78% C | \u003cb\u003e1\u003c/b\u003e || 5.56% | 3 |10.34%| 0 |0.00% | \u003cbr\u003e\n0 |0.00% | \u003cb\u003e1\u003c/b\u003e ||10.00%| 5 || 3.70% A || \u003cb\u003e1\u003c/b\u003e || 5.56% || 4 |13.79%| 8 |11.76%| \u003cb\u003e1\u003c/b\u003e ||10.00\u003cbr\u003e\n%| 0 |0.00% 14 10.37% B | 15 (83.33%| 14 48.28%| 40 58.82%| 7 70.00%| 6&nbsp;..."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "v8NKgWyEhcEC",
+   "etag": "gEA9t2MlCQY",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/v8NKgWyEhcEC",
+   "volumeInfo": {
+    "title": "幼儿学写字 - 1下",
+    "publisher": "Odonata Publishing",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "9832416302"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9789832416302"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.1.1.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=v8NKgWyEhcEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=v8NKgWyEhcEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "zh-CN",
+    "previewLink": "http://books.google.com/books?id=v8NKgWyEhcEC&pg=PA14&dq=1&hl=&cd=5&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=v8NKgWyEhcEC&dq=1&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/%E5%B9%BC%E5%84%BF%E5%AD%A6%E5%86%99%E5%AD%97_1%E4%B8%8B.html?hl=&id=v8NKgWyEhcEC"
+   },
+   "saleInfo": {
+    "country": "CN",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "CN",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=v8NKgWyEhcEC&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "肢体一动觉人际智慧学生一组一组(每组约 5 人)出来表演排队,由教师发出指示。例如\u003cbr\u003e\n: \u003cb\u003e1\u003c/b\u003e 矮的排前面.髙的排后面: 2 短头发的排前面,长头发的排 \u003cb\u003e1\u003c/b\u003e,11(11: 3 女的排前面,男\u003cbr\u003e\n的排后面。 语文智慧卩人际智慧学生三人一组. 14. \u003cb\u003e1 1 1 1 1 1 1 1 1 1 1 1 1\u003c/b\u003e ,- ―\u003cb\u003e1\u003c/b\u003e&nbsp;..."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "8brrP6g7zQgC",
+   "etag": "YqyEMSmO9M0",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/8brrP6g7zQgC",
+   "volumeInfo": {
+    "title": "科科A巩固练习数学 (1上)",
+    "publisher": "Hup Lick Publishing (M) S/B",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "9673481563"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9789673481569"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.1.1.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=8brrP6g7zQgC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=8brrP6g7zQgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "zh-CN",
+    "previewLink": "http://books.google.com/books?id=8brrP6g7zQgC&pg=PA55&dq=1&hl=&cd=6&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=8brrP6g7zQgC&dq=1&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/%E7%A7%91%E7%A7%91A%E5%B7%A9%E5%9B%BA%E7%BB%83%E4%B9%A0%E6%95%B0%E5%AD%A6_1%E4%B8%8A.html?hl=&id=8brrP6g7zQgC"
+   },
+   "saleInfo": {
+    "country": "CN",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "CN",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=8brrP6g7zQgC&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "I 门 1116 「 6 什 196 「 010 「, 5 130「5 0 于 0110001016 「 617101 门 601 0^6「 \u003cb\u003e1\u003c/b\u003e^/\u003cbr\u003e\n16119 \u003cb\u003e1\u003c/b\u003e^6119 016 501716. [ - 10 ^鬧门^ 130「5 01 0110001016 01101 \u003cb\u003e1\u003c/b\u003e^/16119 \u003cbr\u003e\n\u003cb\u003e1\u003c/b\u003e^/16119 601?冰箱里有 8 小块巧克力,明明吃掉一些后,还剩下 5 小块。明明吃掉&nbsp;..."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "Ki7AuiYC0AAC",
+   "etag": "fJb4PJwo44s",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/Ki7AuiYC0AAC",
+   "volumeInfo": {
+    "title": "作文撇步(1)-220成語+15修辭技巧",
+    "authors": [
+     "彭筠蓁"
+    ],
+    "publisher": "台灣五南圖書出版股份有限公司",
+    "publishedDate": "2013-02-01",
+    "description": "你──寫作不會起頭嗎？不會用成語嗎？不會修辭技巧嗎？錯字連篇嗎？ 本書以好學好用的十五種修辭技巧教導如何破題，再輔以容易上手的修辭運用來寫文章。另外，每篇文章中容易寫錯的詞彙或必備的成語都一一用方框標示。 一、每篇作文都各自運用一種修辭技巧來起頭，全書共有十五種破題技巧，例如：建立疑問法、驚嘆共鳴法、如果假設法、引述名言法、顛倒順序法、開門見山法等等。 二、每篇作文都設計「修辭技巧」單元，逐一解析行文時所運用的不同修辭技巧，包括：設問、誇飾、層遞、類疊、轉化等等。 三、附錄創新實用多元化，可以有效協助學子運用修辭、分類成語寫作文，同時不再寫錯別字。其內容包括：常見作文修辭法、常用成語正誤用簡明對照表、常見婚喪喜慶讚美題辭、實用分類成語。",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "9571147796"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9789571147796"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 280,
+    "printType": "BOOK",
+    "categories": [
+     "Education"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.1.1.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=Ki7AuiYC0AAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=Ki7AuiYC0AAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "zh-CN",
+    "previewLink": "http://books.google.com/books?id=Ki7AuiYC0AAC&pg=PT245&dq=1&hl=&cd=7&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=Ki7AuiYC0AAC&dq=1&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/%E4%BD%9C%E6%96%87%E6%92%87%E6%AD%A5_1_220%E6%88%90%E8%AA%9E+15%E4%BF%AE%E8%BE%AD%E6%8A%80%E5%B7%A7.html?hl=&id=Ki7AuiYC0AAC"
+   },
+   "saleInfo": {
+    "country": "CN",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "CN",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=Ki7AuiYC0AAC&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "集閒進虛絡稍煮無無渾循腋雲退與-\u003cb\u003e1\u003c/b\u003e 豆精-\u003cb\u003e1\u003c/b\u003e 渾森惶規成傾成,繹縱燃打事,蹈还口 0 \u003cbr\u003e\n匕孤維委-\u003cb\u003e1\u003c/b\u003e 龜羅恐舉家裘不即萁采生索萬不矩例化蕩鶴谷蛇絕逝非象安集閒進虛絡\u003cbr\u003e\n稍煮無渾循親腋退與豆-\u003cb\u003e1\u003c/b\u003e 渾深皇規成成―\u003cb\u003e1 1\u003c/b\u003e ,譯蹤燃打是蹈!五 01=\u003cb\u003e1\u003c/b\u003e 家狐唯偎匕惡\u003cbr\u003e\n&nbsp;..."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "N6KAAgAAQBAJ",
+   "etag": "JRvJx4TykfU",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/N6KAAgAAQBAJ",
+   "volumeInfo": {
+    "title": "猛子小姐的戀人21 (1)",
+    "authors": [
+     "望月玲子"
+    ],
+    "publisher": "JABook",
+    "publishedDate": "2012-11-01",
+    "description": "在公司擔任秘書的猛子，是一位對工作和愛情都全力以赴、樂在其中的女性；她的男朋友阿靜，則是個充滿魅力、愛好自由，具有一點點神秘感的男人。然而超越重重阻礙，終於過著幸福同居生活的兩人，卻被一片突如其來的陰霾籠罩．．．",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "PKEY:4717702200855"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "printType": "BOOK",
+    "categories": [
+     "Comics & Graphic Novels"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "comicsContent": true,
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=N6KAAgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=N6KAAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "zh-CN",
+    "previewLink": "http://books.google.com/books?id=N6KAAgAAQBAJ&pg=PT60&dq=1&hl=&cd=8&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=N6KAAgAAQBAJ&dq=1&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/%E7%8C%9B%E5%AD%90%E5%B0%8F%E5%A7%90%E7%9A%84%E6%88%80%E4%BA%BA21_1.html?hl=&id=N6KAAgAAQBAJ"
+   },
+   "saleInfo": {
+    "country": "CN",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "CN",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com/books/download/%E7%8C%9B%E5%AD%90%E5%B0%8F%E5%A7%90%E7%9A%84%E6%88%80%E4%BA%BA21_1-sample-pdf.acsm?id=N6KAAgAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=N6KAAgAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "THig go, Illiot Al-IIIجمعيشجع 7.3% في FHE JEL_AMB \u003cb\u003e1\u003c/b\u003e-\u003cb\u003e1\u003c/b\u003e. 1_7-11. *,JPr III. *..*..*..* \u003cbr\u003e\n* *.. الكثير. *.. *, -, *..*..* , &quot; . *..*..* ,F- على 8,THYطفى*: * : 57Tر1889-8900 الى &quot;\u003cbr\u003e\nTTH-54 : le Till Eclips: Ltd 7----* .-- .IITL-T----. - 11 - 11 - \u003cb\u003e1\u003c/b\u003e - HER. 猛子小姐的戀人\u003cbr\u003e\n21&nbsp;..."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "BQubAAAAQBAJ",
+   "etag": "3Ia6NBz72UM",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/BQubAAAAQBAJ",
+   "volumeInfo": {
+    "title": "讀社論學英文1",
+    "authors": [
+     "星島出版"
+    ],
+    "publisher": "Sing Tao Publishing",
+    "publishedDate": "2010-07-30",
+    "description": "要掌握世界大事，又要學習正統英語，星島出版《讀社論學英文》一定是你參考書單中的不二之選。本書精選自《星島日報》社論，共設五大篇章，包括「經濟政治」、「社會民生」、「教育環保」、「國際關係」、「兩岸探討」，內容涵蓋不同範疇的熱門新聞議題，讓讀者緊貼時事，認識常見詞彙，學好正統英語。 《讀社論學英文》所選之社評文章，均立論嚴謹，見解獨到，可作為現時通識課程參考之用。每篇文章附設中英對照，生字學習、實用詞彙、趣味測驗，讓讀者輕易提升英語閱讀及寫作能力，深入了解社會世情。隨書附送MP3光碟，務求讓讀者全面提升英語閱讀能力。",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9789626727829"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "9626727829"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 420,
+    "printType": "BOOK",
+    "categories": [
+     "Foreign Language Study"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "preview-1.0.0",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=BQubAAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=BQubAAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "zh-CN",
+    "previewLink": "http://books.google.com/books?id=BQubAAAAQBAJ&pg=PA404&dq=1&hl=&cd=9&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=BQubAAAAQBAJ&dq=1&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/%E8%AE%80%E7%A4%BE%E8%AB%96%E5%AD%B8%E8%8B%B1%E6%96%871.html?hl=&id=BQubAAAAQBAJ"
+   },
+   "saleInfo": {
+    "country": "CN",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "CN",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com/books/download/%E8%AE%80%E7%A4%BE%E8%AB%96%E5%AD%B8%E8%8B%B1%E6%96%871-sample-pdf.acsm?id=BQubAAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=BQubAAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "... géfififi&#39;ufilifiilfi \u003cb\u003e1\u003c/b\u003e $41E1§$7§Efit§ifiiiifiufiqlill§ ° tfiiiillliffififiu$7efi7ké§ifiii$fi¥\u003cb\u003e1\u003c/b\u003e%E&#39;l\u003cbr\u003e\n%&lt;iht¥~%f%l§ifhifi i \u003cb\u003e1\u003c/b\u003e EEZZZ¥ \u003cb\u003e1\u003c/b\u003e Zifilrefiiilfifitgriilitig¥ &lt;\u003cb\u003e1\u003c/b\u003e fifii%%l31&amp;1&lt;ii§§lli\\5fi¢§\u003cbr\u003e\nfii géfififi&#39;flifiilfi O eTe—lifiilfixf&#39;eittfiiiiéi&#39;ihll O éfiéfififitjfifilififii9€¥ eater litEIJiTE¥l O&nbsp;..."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "Xlzan3XhjNwC",
+   "etag": "PkuW6U0qNto",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/Xlzan3XhjNwC",
+   "volumeInfo": {
+    "title": "合力新格式PRA UPSR系列-华文写作 (1年级)",
+    "publisher": "Hup Lick Publishing (M) S/B",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "9831497473"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9789831497470"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.1.1.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=Xlzan3XhjNwC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=Xlzan3XhjNwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "zh-CN",
+    "previewLink": "http://books.google.com/books?id=Xlzan3XhjNwC&pg=PA48&dq=1&hl=&cd=10&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=Xlzan3XhjNwC&dq=1&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/%E5%90%88%E5%8A%9B%E6%96%B0%E6%A0%BC%E5%BC%8FPRA_UPSR%E7%B3%BB%E5%88%97_%E5%8D%8E%E6%96%87%E5%86%99.html?hl=&id=Xlzan3XhjNwC"
+   },
+   "saleInfo": {
+    "country": "CN",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "CN",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=Xlzan3XhjNwC&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "0 弟弟是个不爱千净的小孩 2,回家 4 水 2 ,球 4 重丙组 0 \u003cb\u003e1\u003c/b\u003e .晚上 2,凉凉 3 ,圆圆 4 \u003cbr\u003e\n月亮 5 ,养 6 \u003cb\u003e1\u003c/b\u003e .舌头 2 鼻子 3 ,狗 4 时候 5 ,汪汪 0 今天,小清拿出画纸和颜色笔来丙组 \u003cbr\u003e\n0 匕 0 刷觉 2 4 牙齿兔子乙组 \u003cb\u003e1\u003c/b\u003e . 3, 5,丙组 0 匕 \u003cb\u003e1\u003c/b\u003e. 3, 5, 3^ 5, 0 老师教我们剪窗花 \u003cb\u003e1\u003c/b\u003e ."
+   }
+  }
+ ]
+}
