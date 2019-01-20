@@ -1,2 +1,6 @@
 # dolphin-pipline
-recieve stream and handle it
+
+Get info from kafka,handle and persist to db.
+
+
+

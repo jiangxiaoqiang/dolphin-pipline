@@ -5,7 +5,7 @@ import configparser
 
 config = configparser.ConfigParser()
 parentDirPath=os.path.dirname(os.path.dirname(os.path.abspath(__file__))) 
-with open(parentDirPath + "/config.ini", "r") as cfgfile:
+with open(parentDirPath + "/config.ini", "r",encoding="utf-8") as cfgfile:
     config.readfp(cfgfile)
 
 class confighelper:
@@ -18,5 +18,5 @@ class confighelper:
     def getValue(self,schema, key):
         return config.get(schema, key)
 
-    def getGlobalValue(self, key):
+    def getGloabalValue(self, key):
         return config.get('global', key)

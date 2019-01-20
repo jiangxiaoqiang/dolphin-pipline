@@ -25,7 +25,7 @@ SECRET_KEY = 'd5ct*sscwby@y(al&s_6dt4y#d*wctg%7=z$%q))8f3qp%_p04'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['spider-service']
+ALLOWED_HOSTS = ['spider-service','localhost','127.0.0.1']
 
 
 # Application definition
@@ -49,15 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    
 ]
-
-SPIDER_MIDDLEWARES = {
-}
-
-DOWNLOADER_MIDDLEWARES = {
-    'dolphin.middlewares.middlewares.ProxyMiddleware': 543,
-}
 
 ROOT_URLCONF = 'dolphin.urls'
 
@@ -132,39 +124,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
-
-BOT_NAME = 'dolphin'
-
-SPIDER_MODULES = ['dolphin.spiders']
-NEWSPIDER_MODULE = 'dolphin.spiders'
-
-
-# Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'tutorial (+http://www.yourdomain.com)'
-
-# Obey robots.txt rules
-ROBOTSTXT_OBEY = False
-HTTPERROR_ALLOWED_CODES = [403]
-DOWNLOAD_DELAY = 2
-CONCURRENT_REQUESTS = 5
-CONCURRENT_REQUESTS_PER_DOMAIN = 100
-CONCURRENT_REQUESTS_PER_IP = 100
-DOWNLOAD_TIMEOUT = 15
-
-ITEM_PIPELINES = {
-    #'mySpider.pipelines.SomePipeline': 300,
-    "dolphin.pipelines.DoubanBookPipeline":300,
-    "dolphin.pipelines.AmazonBookPipeline":300,
-    "dolphin.pipelines.GoogleBookPipeline":300
-}
-
-DEFAULT_REQUEST_HEADERS = {
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-    'Accept-Language': '-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
-}
-
-USER_AGENT = {
-    "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.5",
-}
-

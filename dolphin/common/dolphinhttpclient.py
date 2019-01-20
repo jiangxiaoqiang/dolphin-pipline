@@ -39,10 +39,7 @@ class dolphinhttpclient:
         response_text = str(response,'utf-8')
         return response_text
 
-    def get_response_data(self,url): 
-        proxy_support = urllib.request.ProxyHandler({'http': 'localhost:8888'})
-        opener = urllib.request.build_opener(proxy_support)
-        urllib.request.install_opener(opener)
+    def get_response_data(self,url):          
         req = urllib.request.Request(url)
         response = urllib.request.urlopen(req).read()
         response_text = str(response,'utf-8')
@@ -52,6 +49,9 @@ class dolphinhttpclient:
     def get_response_data_google(self,url):
         headers = {"User-Agent": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; Trident/5.0)"}
         #req = request.Request("https://www.googleapis.com/books/v1/volumes?q=1", headers=headers)
+        proxy_support = urllib.request.ProxyHandler({'https': '127.0.0.1:1080'})
+        opener = urllib.request.build_opener(proxy_support)
+        urllib.request.install_opener(opener)
         req = request.Request(url, headers=headers)
         #req = urllib.request.Request(url)
         response = urllib.request.urlopen(req).read()
@@ -61,9 +61,8 @@ class dolphinhttpclient:
 
     def put(self,url,data):
         headers = {'Content-type': 'application/json'}
-        _encoder = ScrapyJSONEncoder()
-        encode_result = _encoder.encode(data)
-        encode_data = urllib.parse.quote_plus(encode_result)
+        str_data = json.dumps(dict(data[0]))
+        encode_data = urllib.parse.quote_plus(str_data)
         data = bytes(encode_data,'utf8')
         req = urllib.request.Request(url=url,data = data,headers = headers,method='PUT')
         response = urllib.request.urlopen(req,data=data).read()

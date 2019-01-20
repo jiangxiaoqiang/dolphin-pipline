@@ -8,14 +8,12 @@ import time
 
 config = configparser.ConfigParser()
 configFilePath = os.path.abspath("dolphin/config.ini")
-with open(configFilePath, "r") as cfgfile:
+with open(configFilePath, "r",encoding="utf-8") as cfgfile:
     config.readfp(cfgfile)
+
 
 class commonlogger:
     def __init__(self):
-        log_dir_path = os.getcwd() + '/log'
-        if not os.path.exists(log_dir_path):
-            os.makedirs(log_dir_path)
         now_date_time = time.strftime('%Y-%m-%d',time.localtime())
         logFileName = "./dolphin/log/spider" + now_date_time + ".log"
         handler = logging.handlers.RotatingFileHandler(logFileName, maxBytes=1024 * 1024 * 1024,
