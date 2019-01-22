@@ -7,9 +7,9 @@ from kafka import KafkaConsumer
 
 class SpiderBookinfoConsumer:
 
-    consumer = KafkaConsumer('dolphin-test',
+    consumer = KafkaConsumer('dolphin-spider-google-book-bookinfo',
                          bootstrap_servers=['mq-server:9092'],
-                         group_id = "console-consumer-30308",
+                         group_id = "google-book",
                          consumer_timeout_ms=5000)
 
     logger = logging.getLogger(__name__)
