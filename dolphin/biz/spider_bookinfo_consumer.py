@@ -13,13 +13,14 @@ logger = logging.getLogger(__name__)
 
 class SpiderBookinfoConsumer:
 
-    consumer = KafkaConsumer(topics = 'dolphin-spider-google-book-bookinfo',
+    consumer = KafkaConsumer('dolphin-spider-google-book-bookinfo',
                          bootstrap_servers=['mq-server:9092'],
                          group_id = "google-book",
                          client_id = "dolphin-pipline-google-bookinfo-consumer-foolman",
                          # Manage kafka offsets manual
                          enable_auto_commit = False,
-                         consumer_timeout_ms=15000)    
+                         consumer_timeout_ms=5000,
+                         auto_offset_reset = "earliest")    
 
     def consume_bookinfo(self):
         while True:

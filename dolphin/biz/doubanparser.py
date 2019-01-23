@@ -6,7 +6,7 @@ import urllib
 from bs4 import BeautifulSoup
 import psycopg2
 from unicodedata import normalize
-from dolphin.book import book
+from dolphin.models.book import book
 
 class doubanparser:
     def parseWebPage(self,plain_text):

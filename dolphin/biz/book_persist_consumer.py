@@ -9,6 +9,7 @@ from dolphin.db.ssdb_client import SsdbClient
 from scrapy.utils.serialize import ScrapyJSONDecoder
 from dolphin.biz.doubanspiderbiz import doubanspiderbiz
 from dolphin.models.bookserializer import BookSerializer
+from dolphin.biz.spider_bookinfo_consumer import SpiderBookinfoConsumer
 
 logger = logging.getLogger(__name__)
 
@@ -19,13 +20,12 @@ class BookPersistConsumer():
         super().__init__()
 
     def run(self):
-        while True:
-            try:
-                comsumer_instance = BookPersistConsumer()
-                comsumer_instance.save_book_to_db()
-            except Exception as e:
-                logger.error("book persist failed,detail info %s",e)
-    
+        try:
+            spiderBookinfoConsumer = SpiderBookinfoConsumer()
+            spiderBookinfoConsumer.consume_bookinfo()
+        except Exception as e:
+            logger.error("book persist failed,detail info %s",e)
+        
     def save_book_to_db(self):
         try:
             book_text_binary = SsdbClient.qpop_back(SsdbClient)

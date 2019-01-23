@@ -6,7 +6,7 @@ import time
 import urllib
 from bs4 import BeautifulSoup
 import psycopg2
-from dolphin.book import book
+from dolphin.models.book import book
 import requests
 import unicodedata
 from dolphin.common.commonlogger import commonlogger

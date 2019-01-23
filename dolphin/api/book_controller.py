@@ -4,7 +4,6 @@ import json
 import urllib
 import time
 import logging
-import demjson
 import datetime
 from django.http import HttpResponse, JsonResponse
 from kafka import KafkaProducer
