@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 class SpiderBookinfoConsumer:
 
-    consumer = KafkaConsumer('dolphin-spider-google-book-bookinfo',
+    consumer = KafkaConsumer(topics = 'dolphin-spider-google-book-bookinfo',
                          bootstrap_servers=['mq-server:9092'],
                          group_id = "google-book",
                          client_id = "dolphin-pipline-google-bookinfo-consumer-foolman",
