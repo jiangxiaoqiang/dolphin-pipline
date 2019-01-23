@@ -16,7 +16,10 @@ class SpiderBookinfoConsumer:
     consumer = KafkaConsumer('dolphin-spider-google-book-bookinfo',
                          bootstrap_servers=['mq-server:9092'],
                          group_id = "google-book",
-                         consumer_timeout_ms=5000)    
+                         client_id = "dolphin-pipline-google-bookinfo-consumer-foolman",
+                         # Manage kafka offsets manual
+                         enable_auto_commit = False,
+                         consumer_timeout_ms=15000)    
 
     def consume_bookinfo(self):
         while True:
@@ -25,8 +28,12 @@ class SpiderBookinfoConsumer:
                     recv = "%s:%d:%d: key=%s value=%s" % (books.topic, books.partition, books.offset, books.key, books.value)
                     logger.info("Get books info: %s" ,recv)
                     self.parse_bookinfo(books.value)
+                    #self.consumer.commit_async(callback=self.offset_commit_result)
             except Exception as e:
                 logger.erorr(e)
+    
+    def offset_commit_result(self,offsets, response):
+        print("offsets:" + offsets + ",response:" + response)
 
     def parse_bookinfo(self,bookinfos):
         str_body = str(bookinfos, encoding='utf-8')
