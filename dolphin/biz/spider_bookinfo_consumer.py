@@ -2,6 +2,7 @@
 
 import logging
 import urllib
+import json
 import datetime
 from scrapy.utils.serialize import ScrapyJSONDecoder
 from kafka import KafkaConsumer
@@ -38,7 +39,7 @@ class SpiderBookinfoConsumer:
     
     def offset_commit_result(self,offsets, response):
         try:
-            print("offsets:" + offsets + ",response:" + response)
+            print("offsets:" + json.dumps(offsets) + ",response:" + response)
         except Exception as e:
             logger.error("commit offset failed,detail: %s",e)
 
