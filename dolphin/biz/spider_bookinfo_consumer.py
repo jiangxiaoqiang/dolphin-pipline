@@ -20,7 +20,10 @@ class SpiderBookinfoConsumer:
                          # Manage kafka offsets manual
                          enable_auto_commit = False,
                          consumer_timeout_ms=5000,
-                         auto_offset_reset = "earliest")    
+                         # consume from beginning
+                         auto_offset_reset = "earliest",
+                         max_poll_interval_ms = 600000
+                         )    
 
     def consume_bookinfo(self):
         while True:
@@ -29,12 +32,15 @@ class SpiderBookinfoConsumer:
                     recv = "%s:%d:%d: key=%s value=%s" % (books.topic, books.partition, books.offset, books.key, books.value)
                     logger.info("Get books info: %s" ,recv)
                     self.parse_bookinfo(books.value)
-                    #self.consumer.commit_async(callback=self.offset_commit_result)
+                    self.consumer.commit_async(callback=self.offset_commit_result)
             except Exception as e:
                 logger.erorr(e)
     
     def offset_commit_result(self,offsets, response):
-        print("offsets:" + offsets + ",response:" + response)
+        try:
+            print("offsets:" + offsets + ",response:" + response)
+        except Exception as e:
+            logger.error("commit offset failed,detail: %s",e)
 
     def parse_bookinfo(self,bookinfos):
         str_body = str(bookinfos, encoding='utf-8')
