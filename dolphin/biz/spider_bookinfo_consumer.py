@@ -35,7 +35,7 @@ class SpiderBookinfoConsumer:
                     self.parse_bookinfo(books.value)
                     self.consumer.commit_async(callback=self.offset_commit_result)
             except Exception as e:
-                logger.erorr(e)
+                logger.error(e)
     
     def offset_commit_result(self,offsets, response):
         try:
@@ -61,6 +61,7 @@ class SpiderBookinfoConsumer:
                     single_book = books[key]
                     bookSerializer = BookSerializer(data = single_book) 
                     saved_book = bookSerializer.create(single_book)
+                    logger.info("Save book:" +  json.dumps(single_book))
                     industryIdentifiers = single_book["industry_identifiers"]          
                     self.save_identifiers_info(industryIdentifiers,saved_book.id)
                 except Exception as e:
