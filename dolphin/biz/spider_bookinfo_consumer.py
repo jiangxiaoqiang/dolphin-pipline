@@ -38,10 +38,10 @@ class SpiderBookinfoConsumer:
                 logger.error(e)
     
     def offset_commit_result(self,offsets, response):
-        try:
-            print("offsets:" + json.dumps(offsets) + ",response:" + response)
-        except Exception as e:
-            logger.error("commit offset failed,detail: %s",e)
+        if(response is None):
+            logger.info("commit offset success,offsets: %s",offsets)
+        else:
+            logger.error("commit offset success,detail: %s",response)
 
     def parse_bookinfo(self,bookinfos):
         str_body = str(bookinfos, encoding='utf-8')
@@ -61,7 +61,6 @@ class SpiderBookinfoConsumer:
                     single_book = books[key]
                     bookSerializer = BookSerializer(data = single_book) 
                     saved_book = bookSerializer.create(single_book)
-                    logger.info("Save book:" +  json.dumps(single_book))
                     industryIdentifiers = single_book["industry_identifiers"]          
                     self.save_identifiers_info(industryIdentifiers,saved_book.id)
                 except Exception as e:
