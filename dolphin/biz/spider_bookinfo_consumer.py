@@ -3,6 +3,7 @@
 import logging
 import urllib
 import json
+import threading
 import datetime
 from scrapy.utils.serialize import ScrapyJSONDecoder
 from kafka import KafkaConsumer
@@ -20,10 +21,12 @@ class SpiderBookinfoConsumer:
                          client_id = "dolphin-pipline-google-bookinfo-consumer-foolman",
                          # Manage kafka offsets manual
                          enable_auto_commit = False,
-                         consumer_timeout_ms=5000,
+                         consumer_timeout_ms=50000,
                          # consume from beginning
                          auto_offset_reset = "earliest",
-                         max_poll_interval_ms = 600000
+                         max_poll_interval_ms = 6000000,
+                         session_timeout_ms = 60000,
+                         request_timeout_ms = 700000
                          )    
 
     def consume_bookinfo(self):
@@ -32,16 +35,30 @@ class SpiderBookinfoConsumer:
                 for books in self.consumer:
                     recv = "%s:%d:%d: key=%s value=%s" % (books.topic, books.partition, books.offset, books.key, books.value)
                     logger.info("Get books info: %s" ,recv)
-                    self.parse_bookinfo(books.value)
-                    self.consumer.commit_async(callback=self.offset_commit_result)
+                    self.sub_process_handle(books.value)                    
             except Exception as e:
                 logger.error(e)
     
+    def sub_process_handle(self,bookinfo):     
+        number_of_threadings = len(threading.enumerate())
+        if(number_of_threadings < 15):
+            t = threading.Thread(target=self.background_process, args=(bookinfo,), kwargs={})
+            t.start()
+        else:
+            # If all threading running
+            # Using main thread to handle
+            # Slow down kafka consume speed
+            self.parse_bookinfo(bookinfo)
+
+    def background_process(self,bookinfo):        
+        self.parse_bookinfo(bookinfo)
+        self.consumer.commit_async(callback=self.offset_commit_result)        
+
     def offset_commit_result(self,offsets, response):
         if(response is None):
             logger.info("commit offset success,offsets: %s",offsets)
         else:
-            logger.error("commit offset success,detail: %s",response)
+            logger.error("commit offset failed,detail: %s",response)
 
     def parse_bookinfo(self,bookinfos):
         str_body = str(bookinfos, encoding='utf-8')
@@ -61,6 +78,8 @@ class SpiderBookinfoConsumer:
                     single_book = books[key]
                     bookSerializer = BookSerializer(data = single_book) 
                     saved_book = bookSerializer.create(single_book)
+                    thread_name = threading.current_thread().name
+                    logger.info("thread " + thread_name + " saving book: %s ",single_book) 
                     industryIdentifiers = single_book["industry_identifiers"]          
                     self.save_identifiers_info(industryIdentifiers,saved_book.id)
                 except Exception as e:
