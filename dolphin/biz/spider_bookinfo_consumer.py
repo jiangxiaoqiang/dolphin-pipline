@@ -24,7 +24,7 @@ class SpiderBookinfoConsumer:
                          consumer_timeout_ms=50000,
                          # consume from beginning
                          auto_offset_reset = "earliest",
-                         max_poll_interval_ms = 6000000,
+                         max_poll_interval_ms = 600000,
                          session_timeout_ms = 60000,
                          request_timeout_ms = 700000
                          )    
