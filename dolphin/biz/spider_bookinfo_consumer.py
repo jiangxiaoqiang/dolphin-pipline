@@ -33,16 +33,15 @@ class SpiderBookinfoConsumer:
         while True:
             try:
                 for books in self.consumer:
-                    recv = "%s:%d:%d: key=%s value=%s" % (books.topic, books.partition, books.offset, books.key, books.value)
-                    logger.info("Get books info: %s" ,recv)
-                    self.sub_process_handle(books.value)                    
+                    logger.info("Get books info offset: %s" ,books.offset)
+                    self.sub_process_handle(books.value,books.offset)                    
             except Exception as e:
                 logger.error(e)
     
-    def sub_process_handle(self,bookinfo):     
+    def sub_process_handle(self,bookinfo,offset):     
         number_of_threadings = len(threading.enumerate())
-        if(number_of_threadings < 15):
-            t = threading.Thread(target=self.background_process, args=(bookinfo,), kwargs={})
+        if(number_of_threadings < 16):
+            t = threading.Thread(target=self.background_process,name="offset-" + str(offset), args=(bookinfo,), kwargs={})
             t.start()
         else:
             # If all threading running
@@ -70,7 +69,7 @@ class SpiderBookinfoConsumer:
     def save_single_book(self,books):   
         dict_type = type(books)
         if(dict_type == str and len(books) < 5):
-            logger.warn("Null book info")
+            logger.debug("Null book info")
             return
         if(books):
             for key in books:
@@ -79,7 +78,7 @@ class SpiderBookinfoConsumer:
                     bookSerializer = BookSerializer(data = single_book) 
                     saved_book = bookSerializer.create(single_book)
                     thread_name = threading.current_thread().name
-                    logger.info("thread " + thread_name + " saving book: %s ",single_book) 
+                    logger.debug("thread " + thread_name + " saving book: %s ",single_book) 
                     industryIdentifiers = single_book["industry_identifiers"]          
                     self.save_identifiers_info(industryIdentifiers,saved_book.id)
                 except Exception as e:

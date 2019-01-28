@@ -81,8 +81,8 @@ DATABASES = {
         'NAME': 'dolphin',
         'USER':'postgres',
         'PASSWORD':'postgres',
-        'HOST':'bookdb',
-        'PORT':'5432',
+        'HOST':'mq-server',
+        'PORT':'6432',
     }
 }
 
