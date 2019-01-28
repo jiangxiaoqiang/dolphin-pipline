@@ -34,6 +34,7 @@ class SpiderBookinfoConsumer:
             try:
                 for books in self.consumer:
                     logger.info("Get books info offset: %s" ,books.offset)
+                    self.consumer.commit_async(callback=self.offset_commit_result)        
                     self.sub_process_handle(books.value,books.offset)                    
             except Exception as e:
                 logger.error(e)
@@ -51,7 +52,6 @@ class SpiderBookinfoConsumer:
 
     def background_process(self,bookinfo):        
         self.parse_bookinfo(bookinfo)
-        self.consumer.commit_async(callback=self.offset_commit_result)        
 
     def offset_commit_result(self,offsets, response):
         if(response is None):
