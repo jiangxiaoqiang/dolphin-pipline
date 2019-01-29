@@ -24,7 +24,7 @@ class SpiderBookinfoConsumer:
                          enable_auto_commit = False,
                          consumer_timeout_ms=50000,
                          # consume from beginning
-                         auto_offset_reset = "latest",
+                         auto_offset_reset = "earliest",
                          max_poll_interval_ms = 600000,
                          session_timeout_ms = 60000,
                          request_timeout_ms = 700000
@@ -34,8 +34,7 @@ class SpiderBookinfoConsumer:
         while True:
             try:
                 for books in self.consumer:
-                    logger.info("Get books info offset: %s" ,books.offset)
-                    self.consumer.commit_async(callback=self.offset_commit_result)
+                    logger.info("Get books info offset: %s" ,books.offset)                    
                     self.sub_process_handle(books.value,books.offset)                    
             except Exception as e:
                 logger.error(e)
@@ -49,11 +48,13 @@ class SpiderBookinfoConsumer:
             # If all threading running
             # Using main thread to handle
             # Slow down kafka consume speed
-            time.sleep(20)
+            logger.info("Reach max handle thread,sleep 20s to wait thread release...")
+            time.sleep(20)            
             self.sub_process_handle(bookinfo,offset)
 
     def background_process(self,bookinfo):        
-        self.parse_bookinfo(bookinfo)  
+        self.parse_bookinfo(bookinfo)
+        self.consumer.commit_async(callback=self.offset_commit_result)  
 
     def offset_commit_result(self,offsets, response):
         if(response is None):
