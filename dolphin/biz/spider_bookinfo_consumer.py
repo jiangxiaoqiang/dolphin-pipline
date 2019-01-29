@@ -3,6 +3,7 @@
 import logging
 import urllib
 import json
+import time
 import threading
 import datetime
 from scrapy.utils.serialize import ScrapyJSONDecoder
@@ -23,7 +24,7 @@ class SpiderBookinfoConsumer:
                          enable_auto_commit = False,
                          consumer_timeout_ms=50000,
                          # consume from beginning
-                         auto_offset_reset = "earliest",
+                         auto_offset_reset = "latest",
                          max_poll_interval_ms = 600000,
                          session_timeout_ms = 60000,
                          request_timeout_ms = 700000
@@ -34,24 +35,25 @@ class SpiderBookinfoConsumer:
             try:
                 for books in self.consumer:
                     logger.info("Get books info offset: %s" ,books.offset)
-                    self.consumer.commit_async(callback=self.offset_commit_result)        
+                    self.consumer.commit_async(callback=self.offset_commit_result)
                     self.sub_process_handle(books.value,books.offset)                    
             except Exception as e:
                 logger.error(e)
     
     def sub_process_handle(self,bookinfo,offset):     
         number_of_threadings = len(threading.enumerate())
-        if(number_of_threadings < 16):
+        if(number_of_threadings < 13):
             t = threading.Thread(target=self.background_process,name="offset-" + str(offset), args=(bookinfo,), kwargs={})
             t.start()
         else:
             # If all threading running
             # Using main thread to handle
             # Slow down kafka consume speed
-            self.parse_bookinfo(bookinfo)
+            time.sleep(20)
+            self.sub_process_handle(bookinfo,offset)
 
     def background_process(self,bookinfo):        
-        self.parse_bookinfo(bookinfo)
+        self.parse_bookinfo(bookinfo)  
 
     def offset_commit_result(self,offsets, response):
         if(response is None):
