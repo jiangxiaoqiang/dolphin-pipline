@@ -8,7 +8,10 @@ import threading
 import datetime
 from scrapy.utils.serialize import ScrapyJSONDecoder
 from kafka import KafkaConsumer
-
+from kafka.consumer.fetcher import (
+    CompletedFetch, ConsumerRecord, Fetcher, NoOffsetForPartitionError
+)
+from kafka.structs import TopicPartition
 from dolphin.models.bookserializer import BookSerializer
 from dolphin.serilizer.industry_identifiers_serializer import IndustryIdentifiersSerializer
 
@@ -33,12 +36,17 @@ class SpiderBookinfoConsumer:
     def consume_bookinfo(self):
         while True:
             try:
-                msg_pack = self.consumer.poll(timeout_ms=500,max_records=1)
+                msg_pack = self.consumer.poll(timeout_ms=5000,max_records=1)
                 for messages in msg_pack.items():
                     for message in messages:
-                        #for books in self.consumer.poll(max_records = 5):
-                        logger.info("Get books info offset: %s" ,message.offset)                    
-                        self.sub_process_handle(message.value,message.offset)                    
+                        var_type = type(message)
+                        if(isinstance(message,TopicPartition)):
+                            logger.info("TopicPartition: %s", TopicPartition)
+                        if(var_type == list):
+                            for consumer_record in message:
+                                #for books in self.consumer.poll(max_records = 5):
+                                logger.info("Get books info offset: %s" ,consumer_record.offset)                    
+                                self.sub_process_handle(consumer_record.value,consumer_record.offset)                    
             except Exception as e:
                 logger.error(e)
     
