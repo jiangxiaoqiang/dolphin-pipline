@@ -22,7 +22,8 @@ class BookSerializer(serializers.Serializer):
     source = serializers.CharField(required=False,allow_blank=True)
     isbn10 = serializers.CharField(required=False,allow_blank=True)
     industryi_dentifiers = serializers.CharField(required=False,allow_blank=True)
-
+    language = serializers.CharField(required=False,allow_blank=True)
+    description = serializers.CharField(required=False,allow_blank=True)
 
     def create(self, validated_data):
         return Book.objects.create(**validated_data)

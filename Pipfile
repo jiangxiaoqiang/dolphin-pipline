@@ -15,6 +15,7 @@ djangorestframework = "*"
 httpie = "*"
 markdown = "*"
 kafka-python = "*"
+pylint-django = "*"
 
 [requires]
 python_version = "3.7"
