@@ -33,9 +33,12 @@ class SpiderBookinfoConsumer:
     def consume_bookinfo(self):
         while True:
             try:
-                for books in self.consumer:
-                    logger.info("Get books info offset: %s" ,books.offset)                    
-                    self.sub_process_handle(books.value,books.offset)                    
+                msg_pack = self.consumer.poll(timeout_ms=500,max_records=1)
+                for messages in msg_pack.items():
+                    for message in messages:
+                        #for books in self.consumer.poll(max_records = 5):
+                        logger.info("Get books info offset: %s" ,message.offset)                    
+                        self.sub_process_handle(message.value,message.offset)                    
             except Exception as e:
                 logger.error(e)
     
