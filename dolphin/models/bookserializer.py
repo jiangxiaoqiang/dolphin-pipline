@@ -8,6 +8,7 @@ class BookSerializer(serializers.Serializer):
     name = serializers.CharField(allow_blank=False)
     isbn = serializers.CharField(required=True, allow_blank=False)
     author = serializers.ListField(required=True)
+    categories = serializers.ListField(required=False,allow_blank=True)
     publisher = serializers.ListField(required=True)
     publish_year = serializers.CharField(required=False,allow_blank=True)
     binding = serializers.CharField(required=False,allow_blank=True)
