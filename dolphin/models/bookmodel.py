@@ -8,6 +8,7 @@ class Book(models.Model):
     name = models.CharField(blank=False,max_length=256)
     isbn = models.CharField(blank=False,max_length=16)
     publisher = ArrayField(models.CharField(blank=False,max_length=256))
+    categories = ArrayField(models.CharField(max_length=256))
     author = ArrayField(models.CharField(max_length=256))
     publish_year = models.CharField(max_length=32)
     binding = models.CharField(max_length=128)
