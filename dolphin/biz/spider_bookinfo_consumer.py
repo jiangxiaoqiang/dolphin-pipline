@@ -52,7 +52,7 @@ class SpiderBookinfoConsumer:
     
     def sub_process_handle(self,bookinfo,offset):     
         number_of_threadings = len(threading.enumerate())
-        if(number_of_threadings < 13):
+        if(number_of_threadings < 30):
             t = threading.Thread(target=self.background_process,name="offset-" + str(offset), args=(bookinfo,), kwargs={})
             t.start()
         else:
