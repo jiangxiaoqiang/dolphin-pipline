@@ -63,17 +63,9 @@ class SpiderBookinfoConsumer:
             time.sleep(20)            
             self.sub_process_handle(bookinfo,offset)
 
-    def background_process(self,bookinfo):   
-        try:     
-            self.parse_bookinfo(bookinfo)
-            self.consumer.commit_async(callback=self.offset_commit_result)  
-        except Exception as e:
-            #
-            # try in outer layer
-            # if operation failed,the offset will not commit
-            #
-            logger.error("save book encount an error,detail %s ,book info: %s",e,books[key])
-
+    def background_process(self,bookinfo):        
+        self.parse_bookinfo(bookinfo)
+        self.consumer.commit_async(callback=self.offset_commit_result)  
 
     def offset_commit_result(self,offsets, response):
         if(response is None):
@@ -94,15 +86,18 @@ class SpiderBookinfoConsumer:
             logger.debug("Null book info")
             return
         if(books):
-            for key in books:                
-                single_book = books[key]
-                bookSerializer = BookSerializer(data = single_book) 
-                saved_book = bookSerializer.create(single_book)
-                thread_name = threading.current_thread().name
-                logger.debug("thread " + thread_name + " saving book: %s ",single_book) 
-                industryIdentifiers = single_book["industry_identifiers"]          
-                self.save_identifiers_info(industryIdentifiers,saved_book.id)
-                
+            for key in books:
+                try:
+                    single_book = books[key]
+                    bookSerializer = BookSerializer(data = single_book) 
+                    saved_book = bookSerializer.create(single_book)
+                    thread_name = threading.current_thread().name
+                    logger.debug("thread " + thread_name + " saving book: %s ",single_book) 
+                    industryIdentifiers = single_book["industry_identifiers"]          
+                    self.save_identifiers_info(industryIdentifiers,saved_book.id)
+                except Exception as e:
+                    logger.error("save book encount an error,detail %s ,book info: %s",e,books[key])
+
     def save_identifiers_info(self,identifiers,book_id):
         if(identifiers):
             for identify in identifiers:        
