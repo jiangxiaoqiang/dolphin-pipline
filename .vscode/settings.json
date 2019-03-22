@@ -1,12 +1,9 @@
 {
-<<<<<<< HEAD
     "python.pythonPath": "/usr/local/bin/python3",
     "python.formatting.provider":"autopep8",
     "python.formatting.autopep8Args": [
         "--max-line-length=180"
-    ]
-=======
-    "python.pythonPath": "D:\\Programs\\Python\\Python37\\python.exe",
+    ],
+    //"python.pythonPath": "D:\\Programs\\Python\\Python37\\python.exe",
     "python.linting.pylintArgs": ["--load-plugins=pylint_django"]
->>>>>>> 782d666bf710305023bb8ab287e851cf8437fce3
 }
