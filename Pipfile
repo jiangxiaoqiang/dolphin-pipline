@@ -11,11 +11,11 @@ numpy = "*"
 django = "*"
 bs4 = "*"
 psycopg2 = "*"
-rest-framework = "*"
 djangorestframework = "*"
 httpie = "*"
 markdown = "*"
 kafka-python = "*"
+pylint-django = "*"
 
 [requires]
 python_version = "3.7"

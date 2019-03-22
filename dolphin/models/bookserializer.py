@@ -8,6 +8,7 @@ class BookSerializer(serializers.Serializer):
     name = serializers.CharField(allow_blank=False)
     isbn = serializers.CharField(required=True, allow_blank=False)
     author = serializers.ListField(required=True)
+    categories = serializers.ListField(required=False)
     publisher = serializers.ListField(required=True)
     publish_year = serializers.CharField(required=False,allow_blank=True)
     binding = serializers.CharField(required=False,allow_blank=True)
@@ -22,7 +23,8 @@ class BookSerializer(serializers.Serializer):
     source = serializers.CharField(required=False,allow_blank=True)
     isbn10 = serializers.CharField(required=False,allow_blank=True)
     industryi_dentifiers = serializers.CharField(required=False,allow_blank=True)
-
+    language = serializers.CharField(required=False,allow_blank=True)
+    description = serializers.CharField(required=False,allow_blank=True)
 
     def create(self, validated_data):
         return Book.objects.create(**validated_data)

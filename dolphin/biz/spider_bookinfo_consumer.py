@@ -2,10 +2,16 @@
 
 import logging
 import urllib
+import json
+import time
+import threading
 import datetime
 from scrapy.utils.serialize import ScrapyJSONDecoder
 from kafka import KafkaConsumer
-
+from kafka.consumer.fetcher import (
+    CompletedFetch, ConsumerRecord, Fetcher, NoOffsetForPartitionError
+)
+from kafka.structs import TopicPartition
 from dolphin.models.bookserializer import BookSerializer
 from dolphin.serilizer.industry_identifiers_serializer import IndustryIdentifiersSerializer
 
@@ -19,22 +25,53 @@ class SpiderBookinfoConsumer:
                          client_id = "dolphin-pipline-google-bookinfo-consumer-foolman",
                          # Manage kafka offsets manual
                          enable_auto_commit = False,
-                         consumer_timeout_ms=5000,
-                         auto_offset_reset = "earliest")    
+                         consumer_timeout_ms=50000,
+                         # consume from beginning
+                         auto_offset_reset = "earliest",
+                         max_poll_interval_ms =350000,
+                         session_timeout_ms = 60000,
+                         request_timeout_ms = 700000
+                         )    
 
     def consume_bookinfo(self):
         while True:
             try:
-                for books in self.consumer:
-                    recv = "%s:%d:%d: key=%s value=%s" % (books.topic, books.partition, books.offset, books.key, books.value)
-                    logger.info("Get books info: %s" ,recv)
-                    self.parse_bookinfo(books.value)
-                    #self.consumer.commit_async(callback=self.offset_commit_result)
+                msg_pack = self.consumer.poll(timeout_ms=5000,max_records=1)
+                for messages in msg_pack.items():
+                    for message in messages:
+                        var_type = type(message)
+                        if(isinstance(message,TopicPartition)):
+                            logger.info("TopicPartition: %s", TopicPartition)
+                        if(var_type == list):
+                            for consumer_record in message:
+                                #for books in self.consumer.poll(max_records = 5):
+                                logger.info("Get books info offset: %s" ,consumer_record.offset)                    
+                                self.sub_process_handle(consumer_record.value,consumer_record.offset)                    
             except Exception as e:
-                logger.erorr(e)
+                logger.error(e)
     
+    def sub_process_handle(self,bookinfo,offset):     
+        number_of_threadings = len(threading.enumerate())
+        if(number_of_threadings < 30):
+            t = threading.Thread(target=self.background_process,name="offset-" + str(offset), args=(bookinfo,), kwargs={})
+            t.start()
+        else:
+            # If all threading running
+            # Using main thread to handle
+            # Slow down kafka consume speed
+            logger.info("Reach max handle thread,sleep 20s to wait thread release...")
+            time.sleep(20)            
+            self.sub_process_handle(bookinfo,offset)
+
+    def background_process(self,bookinfo):        
+        self.parse_bookinfo(bookinfo)
+        self.consumer.commit_async(callback=self.offset_commit_result)  
+
     def offset_commit_result(self,offsets, response):
-        print("offsets:" + offsets + ",response:" + response)
+        if(response is None):
+            logger.info("commit offset success,offsets: %s",offsets)
+        else:
+            logger.error("commit offset failed,detail: %s",response)
 
     def parse_bookinfo(self,bookinfos):
         str_body = str(bookinfos, encoding='utf-8')
@@ -46,7 +83,7 @@ class SpiderBookinfoConsumer:
     def save_single_book(self,books):   
         dict_type = type(books)
         if(dict_type == str and len(books) < 5):
-            logger.warn("Null book info")
+            logger.debug("Null book info")
             return
         if(books):
             for key in books:
@@ -54,6 +91,8 @@ class SpiderBookinfoConsumer:
                     single_book = books[key]
                     bookSerializer = BookSerializer(data = single_book) 
                     saved_book = bookSerializer.create(single_book)
+                    thread_name = threading.current_thread().name
+                    logger.debug("thread " + thread_name + " saving book: %s ",single_book) 
                     industryIdentifiers = single_book["industry_identifiers"]          
                     self.save_identifiers_info(industryIdentifiers,saved_book.id)
                 except Exception as e:
