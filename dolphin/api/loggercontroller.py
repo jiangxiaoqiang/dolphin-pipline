@@ -1,4 +1,4 @@
-# -*- coding: UTF-8 -*-
+# -*- coding: utf-8 -*-
 
 import json
 from django.http import HttpResponse, JsonResponse
@@ -11,8 +11,7 @@ from kafka import KafkaProducer
 from kafka.errors import KafkaError
 from dolphin.common.commonlogger import commonlogger
 
-commonloggerinstance = commonlogger()
-logger = commonloggerinstance.getlogger()
+logger = commonlogger().getlogger()
 
 class loggercontroller(APIView):
   def post(self,request):

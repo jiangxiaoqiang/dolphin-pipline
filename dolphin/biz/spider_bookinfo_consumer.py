@@ -14,8 +14,9 @@ from kafka.consumer.fetcher import (
 from kafka.structs import TopicPartition
 from dolphin.models.bookserializer import BookSerializer
 from dolphin.serilizer.industry_identifiers_serializer import IndustryIdentifiersSerializer
+from dolphin.common.commonlogger import commonlogger
 
-logger = logging.getLogger(__name__)
+logger = commonlogger().getlogger()
 
 class SpiderBookinfoConsumer:
 
@@ -45,7 +46,7 @@ class SpiderBookinfoConsumer:
                         if(var_type == list):
                             for consumer_record in message:
                                 #for books in self.consumer.poll(max_records = 5):
-                                logger.info("Get books info offset: %s" ,consumer_record.offset)                    
+                                logger.error("Get books info offset: %s" ,consumer_record.offset)                    
                                 self.sub_process_handle(consumer_record.value,consumer_record.offset)                    
             except Exception as e:
                 logger.error(e)
