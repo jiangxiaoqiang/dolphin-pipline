@@ -18,7 +18,7 @@ class commonlogger:
         if not is_exists:
             os.mkdir(log_file_path)
         now_date_time = time.strftime('%Y-%m-%d', time.localtime())
-        logFileName = "/spider" + now_date_time + ".log"
+        logFileName = log_file_path + "/spider" + now_date_time + ".log"
         handler = logging.handlers.RotatingFileHandler(logFileName, maxBytes=1024*1024*100, backupCount=2)
         format = '%(asctime)s - %(filename)s:%(lineno)s - %(name)s - %(message)s'
         formatter = logging.Formatter(format)
