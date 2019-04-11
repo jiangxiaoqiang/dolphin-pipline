@@ -1,0 +1,20 @@
+/*
+* dolphin-pipline handle data workflow logic
+*/
+
+digraph G {
+    node [style=filled,color="#eecc80"]
+    splines="FALSE";
+
+    /* Entities */
+    Consumer [label="Consumer", shape="|square,rectangle,circle,ellipse,triangle,plaintext,point,diamond,pentagon,hexagon,septagon,octagon,egg,trapezium,parallelogram,house,doublecircle,doubleoctagon,tripleoctagon,invtriangle,invtrapezium,invhouse,Mdiamond,Msquare,Mcircle,none,note,tab,folder,box3d|", URL="http://en.wikipedia.org/wiki/John de Fries"]
+        
+    /* Relationships */
+    "MQ(Apache Kafka)" -> Consumer[label="Consume(book info)"]
+    Consumer -> "Thread 1"[label="Create"] 
+    "Thread 1" -> "Database(PostgreSQL)"
+    Consumer -> "Thread 2"[label="Create"] 
+    "Thread 2" -> "Database(PostgreSQL)"
+    Consumer -> "Thread 3"[label="Create"] 
+    "Thread 3" -> "Database(PostgreSQL)"   
+}
