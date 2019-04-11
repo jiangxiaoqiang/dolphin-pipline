@@ -26,23 +26,3 @@ class BookPersistConsumer():
         except Exception as e:
             logger.error("book persist failed,detail info %s",e)
         
-    def save_book_to_db(self):
-        try:
-            book_text_binary = SsdbClient.qpop_back(SsdbClient)
-            if(book_text_binary is not None):            
-                book_text_str = book_text_binary.decode("utf-8")
-                book_object = ast.literal_eval(book_text_str)
-                serializer = BookSerializer(data=book_object)
-                doubanspiderbiz.save_book(doubanspiderbiz,book_object,serializer)
-                logger.info("save book:" + book_text_str)
-            else:
-                logger.info("Having no book,sleep 30 sec...")
-                time.sleep(30)
-        except Exception as e:
-            logger.error("save book to database failed, the detail : %s",e)
-
-
-
-
-
-

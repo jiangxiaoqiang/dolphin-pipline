@@ -2,14 +2,6 @@
 
 import os
 import sys
-import logging
-
-logging.basicConfig(level=logging.INFO,#控制台打印的日志级别
-                    filename='spider-pipline.log',
-                    # 模式，有w和a，w就是写模式，每次都会重新写日志，覆盖之前的日志
-                    # a是追加模式，默认如果不写的话，就是追加模式
-                    filemode='a',                    
-                    format='%(asctime)s - %(pathname)s[line:%(lineno)d] - %(levelname)s: %(message)s')
 
 if __name__ == '__main__':
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dolphin.settings')

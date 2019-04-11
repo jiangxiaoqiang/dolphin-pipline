@@ -13,8 +13,9 @@ from django.core import serializers
 from dolphin.serilizer.word_serializer import WordSerializer
 from dolphin.biz.doubanspiderbiz import doubanspiderbiz
 from dolphin.common.net.restful.api_response import CustomJsonResponse
+from dolphin.common.commonlogger import commonlogger
 
-logger = logging.getLogger(__name__)
+logger = commonlogger().getlogger()
 
 class WordController(APIView):
 
